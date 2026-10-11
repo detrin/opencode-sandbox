@@ -1,0 +1,27 @@
+{
+  "agent": "opencode",
+  "model": "ollama/${OLLAMA_MODEL:-qwen3-coder:30b}",
+  "allowedDomains": [
+    "${OLLAMA_SERVER}"
+  ],
+  "opencode": {
+    "enabled_providers": [
+      "ollama"
+    ],
+    "provider": {
+      "ollama": {
+        "npm": "@ai-sdk/openai-compatible",
+        "name": "Ollama",
+        "options": {
+          "baseURL": "http://${OLLAMA_SERVER}/v1"
+        },
+        "models": {
+          "${OLLAMA_MODEL:-qwen3-coder:30b}": {
+            "name": "${OLLAMA_MODEL:-qwen3-coder:30b}",
+            "tool_call": true
+          }
+        }
+      }
+    }
+  }
+}

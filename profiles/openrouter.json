@@ -1,0 +1,25 @@
+{
+  "agent": "opencode",
+  "model": "openrouter/${OPENROUTER_MODEL:-moonshotai/kimi-k3}",
+  "secrets": [
+    "OPENROUTER_API_KEY"
+  ],
+  "allowedDomains": [
+    "openrouter.ai:443"
+  ],
+  "opencode": {
+    "enabled_providers": [
+      "openrouter"
+    ],
+    "provider": {
+      "openrouter": {
+        "models": {
+          "${OPENROUTER_MODEL:-moonshotai/kimi-k3}": {
+            "name": "${OPENROUTER_MODEL:-moonshotai/kimi-k3}",
+            "tool_call": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "defaultProfile": "claude-bedrock",
+  "allowedDomains": [],
+  "readableHomePaths": [
+    "~/.claude/skills",
+    "~/.agents/skills",
+    "~/.opencode",
+    "~/.local/share/uv/python",
+    "~/projects",
+    "~/.gitconfig",
+    "~/.config/git"
+  ],
+  "deniedHomePaths": [
+    "~/.aws",
+    "~/.ssh",
+    "~/.gnupg",
+    "~/.netrc",
+    "~/.config/gh",
+    "~/.docker",
+    "~/.databrickscfg",
+    "~/Library/Keychains"
+  ],
+  "deniedPatterns": [
+    "**/.env",
+    "**/.env.*",
+    "**/.envrc",
+    "**/*.pem",
+    "**/*.key",
+    "**/*.tfvars",
+    "**/*.tfstate",
+    "**/*.tfstate.backup"
+  ]
+}

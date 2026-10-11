@@ -1,0 +1,15 @@
+{
+  "agent": "claude",
+  "model": "us.anthropic.claude-opus-5-5",
+  "aws": {
+    "profile": "${OCSB_AWS_PROFILE:-default}",
+    "region": "${OCSB_AWS_REGION:-us-east-1}"
+  },
+  "allowedDomains": [
+    "bedrock-runtime.${OCSB_AWS_REGION:-us-east-1}.amazonaws.com:443"
+  ],
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+  }
+}
